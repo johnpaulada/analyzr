@@ -3,6 +3,7 @@ A free app for statistical analysis.
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/99c133e4978a46999174c800e51802ac)](https://www.codacy.com/app/johnpaulada/analyzr?utm_source=github.com&utm_medium=referral&utm_content=johnpaulada/analyzr&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/johnpaulada/analyzr.svg?branch=master)](https://travis-ci.org/johnpaulada/analyzr)
 [![codecov](https://codecov.io/gh/johnpaulada/analyzr/branch/master/graph/badge.svg)](https://codecov.io/gh/johnpaulada/analyzr)
+
 [![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](http://forthebadge.com)
