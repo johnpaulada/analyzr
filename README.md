@@ -1,5 +1,6 @@
 # Analyzr
 A free app for statistical analysis.
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/99c133e4978a46999174c800e51802ac)](https://www.codacy.com/app/johnpaulada/analyzr?utm_source=github.com&utm_medium=referral&utm_content=johnpaulada/analyzr&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/johnpaulada/analyzr.svg?branch=master)](https://travis-ci.org/johnpaulada/analyzr)
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
