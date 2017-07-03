@@ -1,8 +1,8 @@
 import { TabNavigator } from 'react-navigation';
-import AnalyzeScreen from '../screens/AnalyzeScreen';
+import AnalyzeLayout from './AnalyzeLayout';
 
 const AppLayout = TabNavigator({
-  Analyze: { screen: AnalyzeScreen },
+  Analyze: { screen: AnalyzeLayout },
 }, {
   tabBarOptions: { activeTintColor: '#e91e63' },
 });

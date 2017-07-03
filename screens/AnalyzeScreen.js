@@ -5,11 +5,24 @@ import AnalysisList from '../components/AnalysisList';
 export default class AnalyzeScreen extends React.Component {
   constructor(props) {
     super(props);
-    this.testList = [{name: "Dependent t-test", onSelect: () => {}}];
+    this.testList = [
+      {
+        id: 0,
+        name: "Dependent t-test",
+        description: "t-test for dependent data sets.",
+        onSelect: () => {}
+      },
+      {
+        id: 0,
+        name: "Independent t-test",
+        description: "t-test for independent data sets.",
+        onSelect: () => {}
+      }
+    ];
   }
 
   static navigationOptions = {
-    tabBarLabel: 'Analyze',
+    title: 'Analysis List',
   };
 
   render() {
