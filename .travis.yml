@@ -12,5 +12,5 @@ jobs:
   include:
     - stage: jests
       node_js: "7"
-      script: echo "Jest testing!"
-      script: npm test
+      script: echo "Testing with Jest and Codecov..."
+      script: npm run codecov
