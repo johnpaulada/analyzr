@@ -5,14 +5,16 @@ A free app for statistical analysis.
 [![codecov](https://codecov.io/gh/johnpaulada/analyzr/branch/master/graph/badge.svg)](https://codecov.io/gh/johnpaulada/analyzr)
 
 [![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](http://forthebadge.com)
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](http://forthebadge.com)
 
 [![forthebadge](http://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](http://forthebadge.com)
 
 [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com)
-[![forthebadge](http://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
 ---
+
+## Create React Native App README
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
