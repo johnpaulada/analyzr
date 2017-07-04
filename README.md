@@ -1,9 +1,13 @@
 # Analyzr
 A free app for statistical analysis.
+
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/99c133e4978a46999174c800e51802ac)](https://www.codacy.com/app/johnpaulada/analyzr?utm_source=github.com&utm_medium=referral&utm_content=johnpaulada/analyzr&utm_campaign=badger)
 [![codebeat badge](https://codebeat.co/badges/a5f77d14-afab-4a5d-817c-3d92cfac07f7)](https://codebeat.co/projects/github-com-johnpaulada-analyzr-master)
 [![Build Status](https://travis-ci.org/johnpaulada/analyzr.svg?branch=master)](https://travis-ci.org/johnpaulada/analyzr)
 [![codecov](https://codecov.io/gh/johnpaulada/analyzr/branch/master/graph/badge.svg)](https://codecov.io/gh/johnpaulada/analyzr)
+[![Dependencies](https://david-dm.org/johnpaulada/analyzr.svg)](https://david-dm.org/johnpaulada/analyzr)
+[![Code Climate](https://codeclimate.com/github/johnpaulada/analyzr/badges/gpa.svg)](https://codeclimate.com/github/johnpaulada/analyzr)
+[![Issue Count](https://codeclimate.com/github/johnpaulada/analyzr/badges/issue_count.svg)](https://codeclimate.com/github/johnpaulada/analyzr)
 
 [![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](http://forthebadge.com)
