@@ -1,6 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import AnalysisList from '../components/AnalysisList';
+import Papa from 'papaparse';
+
+require('statestes');
 
 export default class AnalyzeScreen extends React.Component {
   constructor(props) {
@@ -24,9 +27,33 @@ export default class AnalyzeScreen extends React.Component {
     ];
   }
 
+  getAnalyze = type => {
+    const analyzeMethods = {
+      'dependent-t-test': result => {
+        const isSignificant = statestes.pairedTTest([result.data[0], result.data[1]]);
+        return isSignificant;
+      },
+      'independent-t-test': result => {
+        const isSignificant = statestes.independentTTest([result.data[0], result.data[1]]);
+        return isSignificant;
+      }
+    }
+
+    const analyze = url => {
+      fetch(url)
+        .then(res => res.text())
+        .then(text => {
+          const result = Papa.parse("1,1,1\n2,6,9");
+          analyzeMethods[type](result);
+        });
+    }
+
+    return analyze;
+  };
+
   onTestSelect = (type, navigate) => {
     return () => {
-      navigate("DataScreen", { analyze: () => {} });
+      navigate("DataScreen", { analyze: this.getAnalyze(type) } );
     }
   }
 

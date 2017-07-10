@@ -6,7 +6,7 @@ const DataForm = props => {
   return (
     <View style={styles.container}>
       <FormLabel>URL</FormLabel>
-      <FormInput onChangeText={() => {}}/>
+      <FormInput onChangeText={props.setUrl}/>
       <FormLabel>Null Hypothesis</FormLabel>
       <FormInput onChangeText={() => {}}/>
       <FormLabel>Alternative Hypothesis</FormLabel>
@@ -15,7 +15,9 @@ const DataForm = props => {
         large
         backgroundColor='#2196F3'
         icon={{name: 'ios-flask', type: 'ionicon'}}
-        title='Analyze' />
+        buttonStyle={{marginTop: 10}}
+        title='Analyze'
+        onPress={props.onPressAnalyze} />
     </View>
   );
 }
