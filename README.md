@@ -17,6 +17,8 @@ A free app for statistical analysis.
 [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
+[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
 ---
 
 ## Create React Native App README

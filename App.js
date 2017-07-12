@@ -1,11 +1,11 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import AppLayout from './layouts/AppLayout';
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+import AppLayout from './layouts/AppLayout'
 
 export default class App extends React.Component {
-  render() {
+  render () {
     return (
       <AppLayout />
-    );
+    )
   }
 }
