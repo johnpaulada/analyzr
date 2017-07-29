@@ -1,9 +1,40 @@
+// @flow
+
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import AnalysisList from '../components/AnalysisList';
 import Papa from 'papaparse';
 
+const R = require('ramda');
 require('statestes');
+
+const getData = R.map(R.map(parseFloat));
+const originalTestBuilder = (test, result) => {
+  const getResult = R.compose(test, getData)
+  const testResult = getResult(result.data);
+  return testResult;
+}
+const testBuilder = R.curry(originalTestBuilder);
+const analyzeMethods = {
+  'dependent-t-test': testBuilder(statestes.pairedTTest),
+  'independent-t-test': testBuilder(statestes.independentTTest)
+}
+const analyzer = async (type, callback, url: string, nullHypothesis: string, alternativeHypothesis: string) => {
+  const response = await fetch(url);
+  const responseAsText = await response.text();
+  // const parsed = Papa.parse("1,2,3,4,5\n1,2,3,4,5");
+  const parsed = Papa.parse(responseAsText);
+  const result = analyzeMethods[type](parsed);
+  callback({type, result, nullHypothesis, alternativeHypothesis})
+}
+const getAnalyze = R.curry(analyzer);
+const interpretResults = (goToResultScreen, {type, result, nullHypothesis, alternativeHypothesis}) => {
+  console.log(result);
+  console.log(alternativeHypothesis);
+  const conclusion = result ? alternativeHypothesis : nullHypothesis;
+  goToResultScreen({result, conclusion});
+}
+const getInterpreter = R.curry(interpretResults);
 
 export default class AnalyzeScreen extends React.Component {
   constructor(props) {
@@ -27,33 +58,14 @@ export default class AnalyzeScreen extends React.Component {
     ];
   }
 
-  getAnalyze = type => {
-    const analyzeMethods = {
-      'dependent-t-test': result => {
-        const isSignificant = statestes.pairedTTest([result.data[0], result.data[1]]);
-        return isSignificant;
-      },
-      'independent-t-test': result => {
-        const isSignificant = statestes.independentTTest([result.data[0], result.data[1]]);
-        return isSignificant;
-      }
-    }
-
-    const analyze = url => {
-      fetch(url)
-        .then(res => res.text())
-        .then(text => {
-          const result = Papa.parse("1,1,1\n2,6,9");
-          analyzeMethods[type](result);
-        });
-    }
-
-    return analyze;
-  };
+  goToResultScreen = params => {
+    const { navigate } = this.props.navigation;
+    navigate("ResultScreen", params );
+  }
 
   onTestSelect = (type, navigate) => {
     return () => {
-      navigate("DataScreen", { analyze: this.getAnalyze(type) } );
+      navigate("DataScreen", { analyze: getAnalyze(type, getInterpreter(this.goToResultScreen)) } );
     }
   }
 

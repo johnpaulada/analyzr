@@ -8,9 +8,9 @@ const DataForm = props => {
       <FormLabel>URL</FormLabel>
       <FormInput onChangeText={props.setUrl} />
       <FormLabel>Null Hypothesis</FormLabel>
-      <FormInput onChangeText={() => {}} />
+      <FormInput onChangeText={props.setNullHypothesis} />
       <FormLabel>Alternative Hypothesis</FormLabel>
-      <FormInput onChangeText={() => {}} />
+      <FormInput onChangeText={props.setAlternativeHypothesis} />
       <Button
         large
         backgroundColor='#2196F3'

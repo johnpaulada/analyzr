@@ -7,7 +7,9 @@ export default class DataScreen extends React.Component {
     super(props);
 
     this.state = {
-      url: ''
+      url: '',
+      nullHypothesis: '',
+      alternativeHypothesis: ''
     }
   }
 
@@ -15,9 +17,18 @@ export default class DataScreen extends React.Component {
     this.setState({url});
   }
 
+  setNullHypothesis = nullHypothesis => {
+    this.setState({nullHypothesis});
+  }
+
+  setAlternativeHypothesis = alternativeHypothesis => {
+    this.setState({alternativeHypothesis});
+  }
+
   onPressAnalyze = () => {
+    const { url, nullHypothesis, alternativeHypothesis } = this.state;
     const analyze = this.props.navigation.state.params.analyze;
-    analyze(this.state.url);
+    analyze(url, nullHypothesis, alternativeHypothesis);
   }
 
   static navigationOptions = {
@@ -27,6 +38,8 @@ export default class DataScreen extends React.Component {
   render() {
     return (<DataForm
       setUrl={this.setUrl}
+      setNullHypothesis={this.setNullHypothesis}
+      setAlternativeHypothesis={this.setAlternativeHypothesis}
       onPressAnalyze={this.onPressAnalyze}
     />);
   }
