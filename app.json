@@ -1,5 +1,29 @@
 {
   "expo": {
-    "sdkVersion": "18.0.0"
+    "name": "Analyzr",
+    "description": "A free, minimalist, and easy to use mobile app for inferential statistics.",
+    "slug": "analyzr",
+    "privacy": "public",
+    "sdkVersion": "18.0.0",
+    "primaryColor": "#03A9F4",
+    "orientation": "portrait",
+    "icon": "assets/analyzr-logo.png",
+    "loading": {
+      "icon": "assets/icon-xxxhdpi.png",
+      "backgroundColor": "#FAFAFA",
+      "hideExponentText": true
+    },
+    "androidStatusBarColor": "#03A9F4",
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#03A9F4"
+    },
+    "android": {
+      "package": "com.johnpaulada.analyzr",
+      "icon": "assets/icon-xxxhdpi.png"
+    },
+    "ios": {
+      "bundleIdentifier": "com.johnpaulada.analyzr"
+    }
   }
 }
