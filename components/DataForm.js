@@ -1,10 +1,17 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import { Button, FormLabel, FormInput } from 'react-native-elements'
+import { FacebookAds } from 'expo'
 
 const DataForm = props => {
   return (
     <View style={styles.container}>
+      <FacebookAds.BannerView
+        placementId="251662172008220_251769015330869"
+        type="standard"
+        onPress={() => console.log('click')}
+        onError={(err) => console.log('error', err)}
+      />
       <FormLabel>URL</FormLabel>
       <FormInput onChangeText={props.setUrl} />
       <FormLabel>Null Hypothesis</FormLabel>

@@ -4,6 +4,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import AnalysisList from '../components/AnalysisList';
 import Papa from 'papaparse';
+import { FacebookAds } from 'expo';
 
 const R = require('ramda');
 require('statestes');
@@ -25,8 +26,8 @@ const analyzeMethods = {
 const analyzer = async (type, callback, url: string, nullHypothesis: string, alternativeHypothesis: string) => {
   const response = await fetch(url);
   const responseAsText = await response.text();
-  const parsed = Papa.parse("1,2,3,4,5\n1,1,1,4,5");
-  // const parsed = Papa.parse(responseAsText);
+  // const parsed = Papa.parse("1,2,3,4,5\n1,1,1,4,5");
+  const parsed = Papa.parse(responseAsText);
   const result = analyzeMethods[type](parsed);
   callback({type, result, nullHypothesis, alternativeHypothesis})
 }
@@ -89,8 +90,11 @@ const getInterpreter = R.curry(interpretResults);
 export default class AnalyzeScreen extends React.Component {
   constructor(props) {
     super(props);
-
     const { navigate } = this.props.navigation;
+
+    FacebookAds.InterstitialAdManager.showAd("251662172008220_251740975333673")
+      .then(didClick => {})
+      .catch(error => {})
 
     this.testList = [
       {

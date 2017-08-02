@@ -5,6 +5,7 @@
     "slug": "analyzr",
     "privacy": "public",
     "sdkVersion": "18.0.0",
+    "version": "0.1.1",
     "primaryColor": "#03A9F4",
     "orientation": "portrait",
     "icon": "assets/analyzr-logo.png",
@@ -20,7 +21,8 @@
     },
     "android": {
       "package": "com.johnpaulada.analyzr",
-      "icon": "assets/icon-xxxhdpi.png"
+      "icon": "assets/icon-xxxhdpi.png",
+      "versionCode": 2
     },
     "ios": {
       "bundleIdentifier": "com.johnpaulada.analyzr"

@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import R from 'ramda';
+import { FacebookAds } from 'expo'
 
 const textToResultField = (f, i) => {
   const TEXT_STYLES = [styles.fieldTitle, styles.fieldInfo];
@@ -15,6 +16,12 @@ const ResultDisplay = props => {
   const resultFields = getResultFields(resultsData);
   return (
     <View style={styles.container}>
+      <FacebookAds.BannerView
+        placementId="251662172008220_251769518664152"
+        type="standard"
+        onPress={() => console.log('click')}
+        onError={(err) => console.log('error', err)}
+      />
       {resultFields}
     </View>
   )
